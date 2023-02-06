@@ -46,7 +46,7 @@ class CookieBanner extends React.Component {
     this.consetsCallback = this.consetsCallback.bind(this);
     this.onToggleCoryphaPreference = this.onToggleCoryphaPreference.bind(this);
 
-    this.cookies = new Cookies(wholeDomain);
+    this.cookies = new Cookies(wholeDomain, this.props.cookieOptions);
   }
 
   async componentDidMount() {
@@ -264,6 +264,7 @@ class CookieBanner extends React.Component {
       onDeclinePreferences = () => {},
       onDeclineStatistics = () => {},
       onDeclineMarketing = () => {},
+      
     } = this.props;
 
     const hasPreferencesCookie = this.cookies.get(PREFERENCES_COOKIE);
@@ -393,6 +394,11 @@ CookieBanner.protoTypes = {
   coryphaApiKey: PropTypes.string,
   onAcceptCoryphaPreferences: PropTypes.func,
   onDeclineCoryphaPreferences: PropTypes.func,
+  cookieOptions: PropTypes.shape({
+    secure: PropTypes.bool,
+    httpOnly: PropTypes.bool,
+    sameSite: PropTypes.bool
+  })
 };
 
 export default CookieBanner;
