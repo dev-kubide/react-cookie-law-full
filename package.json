@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dev-kubide/react-cookie-law-full.git"
+    "url": "git+https://github.com/dev-kubide/react-cookie-law-full.git"
   },
   "homepage": "https://github.com/dev-kubide/react-cookie-law-full#readme",
   "keywords": [
@@ -22,9 +22,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/kubide.dev"
-  },
   "scripts": {
     "build": "webpack --mode=production",
     "test": "jest --coverage",
@@ -91,5 +88,11 @@
     "hooks": {
       "pre-commit": "npm run precommit"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/dev-kubide/react-cookie-law-full/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }
