@@ -1,6 +1,6 @@
-import React from 'react';
-import bannerStyle from './bannerStyle';
-import CookieBannerPreferences from './CookieBannerPreferences';
+import React from "react";
+import bannerStyle from "./bannerStyle";
+import CookieBannerPreferences from "./CookieBannerPreferences";
 
 class CookieBannerContent extends React.Component {
   constructor(props) {
@@ -12,15 +12,18 @@ class CookieBannerContent extends React.Component {
   render() {
     const {
       styles = {},
-      className = '',
-      message = 'No text',
-      policyLink = '/#',
-      privacyPolicyLinkText = 'Privacy Policy',
-      acceptButtonText = 'Accept all',
-      managePreferencesButtonText = 'Mange my cookies',
-      savePreferencesButtonText = 'Save and close',
+      className = "",
+      message = "No text",
+      policyLink = "/#",
+      privacyPolicyLinkText = "Privacy Policy",
+      acceptButtonText = "Accept all",
+      managePreferencesButtonText = "Mange my cookies",
+      savePreferencesButtonText = "Save and close",
       onConfirm = () => {},
       onAcceptAll = () => {},
+      showDeclineButton = false,
+      declineButtonText = "Decline all",
+      onDecline = () => {},
     } = this.props;
 
     const { showPreferences } = this.state;
@@ -48,6 +51,7 @@ class CookieBannerContent extends React.Component {
 
           <a
             href={policyLink}
+            target="_blank"
             className="react-cookie-law-policy"
             style={policyStyle}
           >
@@ -85,6 +89,16 @@ class CookieBannerContent extends React.Component {
             >
               <span>{acceptButtonText}</span>
             </button>
+            {showDeclineButton && (
+              <button
+                type="button"
+                className="react-cookie-law-accept-btn"
+                style={buttonStyle}
+                onClick={() => onDecline()}
+              >
+                <span>{declineButtonText}</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
