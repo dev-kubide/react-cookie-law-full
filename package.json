@@ -1,17 +1,14 @@
 {
-  "name": "@palmabit/react-cookie-law",
+  "name": "@kubide.dev/react-cookie-law-full",
   "version": "0.7.0",
-  "description": "React Cookie banner GDPR compliance",
+  "description": "React Cookie banner GDPR compliance with decline all cookies enabled",
   "author": "Alessandro Sarzina <a.sarzina@palmabit.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Palmabit-IT/react-cookie-law.git"
+    "url": "https://github.com/dev-kubide/react-cookie-law-full.git"
   },
-  "bugs": {
-    "url": "https://github.com/Palmabit-IT/react-cookie-law/issues"
-  },
-  "homepage": "https://github.com/Palmabit-IT/react-cookie-law#readme",
+  "homepage": "https://github.com/dev-kubide/react-cookie-law-full#readme",
   "keywords": [
     "gdpr",
     "cookie",
@@ -25,6 +22,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/kubide.dev"
+  },
   "scripts": {
     "build": "webpack --mode=production",
     "test": "jest --coverage",

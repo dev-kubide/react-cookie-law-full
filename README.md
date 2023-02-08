@@ -10,15 +10,7 @@ A React Cookie Banner component GDPR compliance.
 
 ```
 
-yarn add @palmabit/react-cookie-law
-
-```
-
-or
-
-```
-
-npm install --save @palmabit/react-cookie-law
+npm install --save @kubide.dev/react-cookie-law-full
 
 ```
 
@@ -109,14 +101,6 @@ React.renderComponent(
 | **button** | Style for buttons (`.react-cookie-law-dialog` class) |
 
 ## Test
-
-```
-
-yarn test
-
-```
-
-or
 
 ```
 
